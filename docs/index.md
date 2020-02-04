@@ -1,6 +1,6 @@
-## Welcome to GitH ub Pages
+## Welcome to GIS and remote sensing for conservation and evolutionary biology
 
-You can use the [editor on GitHub](https://github.com/Pgalante/RGGS_GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# You can use the [editor on GitHub](https://github.com/Pgalante/RGGS_GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
