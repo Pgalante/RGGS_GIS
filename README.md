@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to GitH ub Pages
 
 You can use the [editor on GitHub](https://github.com/Pgalante/RGGS_GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
