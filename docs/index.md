@@ -1,3 +1,6 @@
+require_once 'protect.php';
+Protect\with('form.php', 'my_password');
+
 # Welcome to GIS and remote sensing for conservation and evolutionary biology
 
 Syllabus 
