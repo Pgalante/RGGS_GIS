@@ -1,5 +1,10 @@
 # Welcome to GIS and remote sensing for conservation and evolutionary biology
 
+Syllabus 
+
+Grading rubric
+
+
 | Date    | Lecture | Task | Literature |
 |:-------:|:-------:|:----:|:-------:|
 | 4 March | [Introduction to GIS]() | [Homework]() | [Readings]() |
