@@ -1,8 +1,8 @@
 # Welcome to GIS and remote sensing for conservation and evolutionary biology
 
-Syllabus # Will add link
+[Syllabus](misc/RGGS_GIS_Course_Syllabus_2020.docx)
 
-Grading rubric  # will add link
+[Grading rubric](misc/rubric.docx)  
 
 [Download data for sessions 5, 6, and 7](https://github.com/Pgalante/RGGS_GIS/raw/master/data/sessionData.zip)
 
