@@ -8,7 +8,7 @@
 
 | Date    | Lecture | Task | Literature |
 |:-------:|:-------:|:----:|:-------:|
-| 4 March | *Introduction to GIS* | [Homework](homework/lab1.docx) | [Graham et al., 2004](readings/Session1_readings/Graham_etal2004.pdf) |
+| 4 March | *Introduction to GIS* | [Homework](homework/Lab1.docx) | [Graham et al., 2004](readings/Session1_readings/Graham_etal2004.pdf) |
 | 11 March | *Environmental Layers in GIS* | [Homework]() | [Kozak et al., 2008](readings/Session2_readings/Kozak_etal2008.pdf) |
 | 25 March | *Introduction to Remote Sensing* | [Homework]() | [Chapter 4](readings/Session3_readings/Chapter4.pdf), [Rose et al., 2014](readings/Session3_readings/ROSE_et_al-2014-Conservation_Biology.pdf) |
 | 1 April |  *Introduction to species distribution modeling* | [Homework]() | [Pearson SDM guide](readings/Session4_readings/Pearson_SDMGuide.pdf), [Phillips 2006](readings/Session4_readings/Phillips_EcMod_2006.pdf) |
