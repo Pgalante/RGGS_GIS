@@ -5,7 +5,7 @@ library(dismo)
 library(rgdal)
 
 ## Set working directory to save bioclim data
-setwd('C:/Users/pgalante/Documents/Projects/Global_Wc/Rasters/NorthAmerica')
+setwd('C:\\Users\\pgalante\\layers\\NAwC0.5')
 
 ### when downloading Worldclim data through R, at the 0.5 resolution (30 Arc-seconds- the highest available)
 ## you can only download data by tile. For our study region, we need to download four tiles, then
@@ -19,34 +19,29 @@ env4<-getData(name="worldclim", var="bio", res=0.5, download=T, lat=20, lon=-100
 
 # Merge the four tiles into one rasterstack called envall (raster functions use the Raster package, which is included in dismo)
 env12<-merge(env1, env2)
-enva123<-merge(env12, env3)
+env123<-merge(env12, env3)
 envall<-merge(env123, env4)
 
-## Define the extent of the study region we want
+## Define the extent of the study region
 e<-extent(c(-103.057, -51.625, 15.139, 52.582))
 # crop bioclim data to this extent
 Bio<-crop(envall, e)
 
-### Now, let's load the occurrence localities from Session 1, and plot them on this map. We will also save these
-# rasters as GeoTiffs for future use.
-Locs<-readOGR("C:/Users/pgalante/Documents/Projects/QGIS_tutorial/RGGS_GIS/Session1_data", "Locs")
-# Add these points on top of a bio layer (using plot(Bio[[1]], or similar command).
-points(Locs)
-
-## Let's save these rasters as GeoTiffs. For this we need to use a for loop to iterate through the layers
-## of the rasterstack, saving each one with the correct name and extension.
-#First, set the working directory to where you want to save the rasters
-setwd('C:/Users/pgalante/Documents/Projects/Global_Wc/Rasters/clipped/R')
-for (i in 1:nlayers(Bio)){
-  # writeRaster is a function that will write each layer with the correct name. As the 
-  # loop iterates through, each layer in turn becomes "i". For the names, we will
-  # use the names from any of the rasterstacks we downloaded from worldclim
-  writeRaster(Bio[[i]], filename = names(env1[[i]]), format='GTiff')
-}
+## Save these rasters as GeoTiffs. Set the path to where you would like to save them.
+## We will name them after env1, after removing the trailing underscore
+envNames <- gsub("_.*", "", names(env1))
+names(Bio) <- envNames
+writeRaster(Bio, filename = paste0("C:/Users/pgalante/layers/NAwC0_5/", names(Bio)), format = "GTiff", bylayer = T)
 
 ## Load rasters back into R. For pattern, the \\ tells R that anything can come before the pattern,
 # and the $ tells R that this pattern should only be at the end of the file's name.
-bio<-stack(list.files(path = 'C:/Users/pgalante/Documents/Projects/Global_Wc/Rasters/clipped/R', pattern = '\\.tif$', full.names = T))
+bio<-stack(list.files(path = 'C:/Users/pgalante/layers/NAwC0_5', pattern = '\\.tif$', full.names = T))
+
+### Now, let's load the occurrence localities from Session 1, and plot them on this map. We will also save these
+# rasters as GeoTiffs for future use.
+Locs <- read.csv("C:\\Users\\pgalante\\Downloads\\sessionData\\Session1_data\\Locs.csv")[,2:3]
+# Add these points on top of a bio layer (using plot(Bio[[1]], or similar command).
+points(Locs)
 
 ## In R, manipulating rasters is very easy. Take a look at at the first few values of Bio1:
 names(bio[[1]])

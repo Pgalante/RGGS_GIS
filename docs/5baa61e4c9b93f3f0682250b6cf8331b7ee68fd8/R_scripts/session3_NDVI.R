@@ -31,7 +31,7 @@ b9<-raster("LC80160302016111LGN00_B9.TIF")
 b10<-raster("LC80160302016111LGN00_B10.TIF")
 b11<-raster("LC80160302016111LGN00_B11.TIF")
 
-# Create a rasterbrick from the list of cropped rasters that all have the same extent.
+# Create a raster stack from the list of cropped rasters that all have the same extent.
 # This may take some time. To save time you can load fewer rasters, or remove some.
 # We only need bands 4 and 5. Use rm(c(b1, b2, b3...)) to remove those rasters from R's memory, then modify the code below to accomodate these changes.
 LandSat.stack<-stack(c(b1, b2, b3, b4, b5 ,b6 ,b7))
