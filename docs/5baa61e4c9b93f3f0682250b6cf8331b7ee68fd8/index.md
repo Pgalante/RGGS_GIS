@@ -6,6 +6,8 @@
 
 [Download data](https://github.com/Pgalante/RGGS_GIS/raw/master/data/sessionData.zip)
 
+[Example ENMeval and Maxent workflow](misc/ENMeval.R)
+
 | Date    | Lecture | Homework | Project Tasks | Literature |
 |:-------:|:-------:|:----:|:-------:|:------:|
 | 4 March | [*Introduction to GIS*](lectures/Lecture_1_2020.pdf) | [Homework](homework/Lab1.docx) [R component](R_scripts/Session1.R) | [Project Task 1](project_tasks/Session1_project_tasks.docx) | [Graham et al., 2004](readings/Session1_readings/Graham_etal2004.pdf) |
